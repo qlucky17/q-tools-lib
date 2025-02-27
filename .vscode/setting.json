@@ -1,7 +1,17 @@
 {
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
-  "eslint.validate": ["typescript", "javascript"],
+  "eslint.validate": [ 
+    "javascript",
+    "typescript",
+    "vue",
+    "html",
+    "css",
+    "scss",
+    "less",
+    "json",
+    "markdown"
+  ],
   "prettier.requireConfig": true,
   "files.autoSave": "onWindowChange",
   "editor.tabSize": 2,
