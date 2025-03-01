@@ -23,14 +23,24 @@ export default {
     ],
     'type-empty': [2, 'never'], // 提交类型不能为空
     'type-case': [2, 'always', 'lower-case'], // 提交类型必须是小写
-    // 'scope-empty': [2, 'never'], // 作用域不能为空,作用域指type后面的()内容,如feat(api)
-    // 'scope-case': [0], // 不限制作用域大小写
+    'scope-empty': [0, 'never'], // 作用域允许为空
+    'scope-case': [0], // 不限制作用域大小写
     'subject-empty': [2, 'never'], // 主题不能为空
     'subject-case': [0], // 不限制主题大小写
-    'header-max-length': [2, 'always', 80], // 提交标题最大长度限制(包括type,scope,subject)
+    'header-max-length': [2, 'always', 80], // 标题最大字符数限制(包括<type>(<scope>): <subject>)
     // 'body-leading-blank': [2, 'always'], // 正文前必须有一个空格
-    'body-max-line-length': [2, 'always', 80], // 正文每行的长度不能超过100个字符
+    'body-max-line-length': [2, 'always', 100], // 正文每行的最大字符数限制
     // 'footer-leading-blank': [2, 'always'], // 脚注前必须有一个空格
-    'footer-max-line-length': [2, 'always', 80], // 脚注每行的最大长度不超过100个字符
+    'footer-max-line-length': [2, 'always', 100], // 脚注每行的最大字符数限制
   },
 };
+
+// 一个规范的提交信息通常分为三部分：
+// 1. 标题（header）：
+//   <type>(<scope>): <subject>
+// 2. 正文（body）（可选）：
+//   <空行>
+//   <body>
+// 3. 脚注（footer）（可选）：
+//   <空行>
+//   <footer>
