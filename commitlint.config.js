@@ -28,19 +28,19 @@ export default {
     'subject-empty': [2, 'never'], // 主题不能为空
     'subject-case': [0], // 不限制主题大小写
     'header-max-length': [2, 'always', 80], // 标题最大字符数限制(包括<type>(<scope>): <subject>)
-    // 'body-leading-blank': [2, 'always'], // 正文前必须有一个空格
-    'body-max-line-length': [2, 'always', 100], // 正文每行的最大字符数限制
-    // 'footer-leading-blank': [2, 'always'], // 脚注前必须有一个空格
-    'footer-max-line-length': [2, 'always', 100], // 脚注每行的最大字符数限制
+    'body-leading-blank': [2, 'always'], // 正文前必须有一个空格
+    'body-max-line-length': [2, 'always', 10], // 正文每行的最大字符数限制
+    'footer-leading-blank': [2, 'always'], // 脚注前必须有一个空格
+    'footer-max-line-length': [2, 'always', 10], // 脚注每行的最大字符数限制
   },
 };
 
 // 一个规范的提交信息通常分为三部分：
-// 1. 标题（header）：
+// 1. 标题header：
 //   <type>(<scope>): <subject>
-// 2. 正文（body）（可选）：
+// 2. 正文body(可选)：
 //   <空行>
 //   <body>
-// 3. 脚注（footer）（可选）：
+// 3. 脚注footer(可选)：
 //   <空行>
 //   <footer>
