@@ -18,14 +18,14 @@ export default [
   },
   /** js推荐配置 */
   eslint.configs.recommended,
-  /** ts 推荐配置 */
+  /** ts推荐配置 */
   ...tseslint.configs.recommended,
   /** vue推荐配置 */
   ...eslintPluginVue.configs['flat/recommended'],
-  /** prettier 配置 */
+  /** prettier配置 */
   eslintPluginPrettierRecommended,
 
-  // javascript 规则
+  // javascript规则
   {
     files: ['**/*.{js,mjs,cjs,jsx,ts,tsx,vue}'],
     ignores: ['**/*.config.js'],
@@ -179,7 +179,7 @@ export default [
     },
   },
 
-  // vue 规则
+  // vue规则
   {
     files: ['**/*.vue'],
     languageOptions: {

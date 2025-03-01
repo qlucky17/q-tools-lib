@@ -2,34 +2,35 @@ export default {
   extends: ['@commitlint/config-conventional'],
   ignores: [(commit) => commit.includes('init')], // 提交过程中忽略有init的字符串
   rules: {
+    // 提交类型必须在指定的数组中
     'type-enum': [
-      // type枚举
       2,
       'always',
       [
-        'build', // 编译相关的修改，例如发布版本、对项目构建或者依赖的改动
         'feat', // 新功能
         'fix', // 修补bug
-        'docs', // 文档修改
-        'style', // 代码格式修改, 注意不是 css 修改
-        'refactor', // 重构
         'perf', // 优化相关，比如提升性能、体验
-        'test', // 测试用例修改
+        'style', // 代码格式修改, 注意不是css修改
         'revert', // 代码回滚
-        'ci', // 持续集成修改
         'config', // 配置修改
+        'docs', // 文档修改
+        'test', // 测试用例修改
+        'ci', // 持续集成修改
         'chore', // 其他改动
+        'build', // 编译相关的修改，例如发布版本、对项目构建或者依赖的改动
+        'refactor', // 重构
       ],
     ],
-    'type-empty': [2, 'never'], // never: type不能为空; always: type必须为空
-    'type-case': [0, 'always', 'lower-case'], // type必须小写，upper-case大写，camel-case小驼峰，kebab-case短横线，pascal-case大驼峰，等等
-    'scope-empty': [0],
-    'scope-case': [0],
-    'subject-empty': [2, 'never'], // subject不能为空
-    'subject-case': [0], // subject位不限制大小写，默认是'lower-case'，开头字母为小写
-    'subject-full-stop': [0, 'never', '.'], // subject以.为结束标记
-    'header-max-length': [2, 'always', 100], // header最长100
-    'body-leading-blank': [0], // body换行
-    'footer-leading-blank': [0, 'always'], // footer以空行开头
+    'type-empty': [2, 'never'], // 提交类型不能为空
+    'type-case': [2, 'always', 'lower-case'], // 提交类型必须是小写
+    // 'scope-empty': [2, 'never'], // 作用域不能为空,作用域指type后面的()内容,如feat(api)
+    // 'scope-case': [0], // 不限制作用域大小写
+    'subject-empty': [2, 'never'], // 主题不能为空
+    'subject-case': [0], // 不限制主题大小写
+    'header-max-length': [2, 'always', 80], // 提交标题最大长度限制(包括type,scope,subject)
+    'body-leading-blank': [2, 'always'], // 正文前必须有一个空行
+    'body-max-line-length': [2, 'always', 80], // 正文每行的长度不能超过100个字符
+    'footer-leading-blank': [2, 'always'], // 脚注前必须有一个空行
+    'footer-max-line-length': [2, 'always', 80], // 脚注每行的最大长度不超过100个字符
   },
 };
