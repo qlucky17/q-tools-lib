@@ -8,7 +8,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 export default [
   /** 忽略文件 */
   {
-    ignores: ['node_modules', 'dist', '/bin', '/public', '.husky', '.vscode', '.DS_Store'],
+    ignores: ['node_modules', 'dist', 'bin', 'public', '.husky', '.vscode', '.DS_Store'],
   },
   /** 全局变量 */
   {
@@ -28,21 +28,22 @@ export default [
   // javascript 规则
   {
     files: ['**/*.{js,mjs,cjs,jsx,ts,tsx,vue}'],
+    ignores: ['**/*.config.js'],
     rules: {
       // 对象结尾逗号
       'comma-dangle': 'off',
 
       // 关闭未定义变量
-      'no-undef': 'off',
+      // 'no-undef': 'off',
 
       // 确保 Prettier 的行为不会被 ESLint 覆盖
       quotes: ['error', 'single', { allowTemplateLiterals: true }],
 
       // 关闭对未定义变量的警告
-      'no-undefined': 'off',
+      // 'no-undefined': 'off',
 
       //不使用的变量不报错
-      'no-unused-vars': 'off',
+      // 'no-unused-vars': 'off',
 
       // 禁止使用不规范的空格
       'no-irregular-whitespace': 'off',

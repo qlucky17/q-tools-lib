@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint:eslint": "eslint . --fix",
-    "lint:prettier": "prettier --write .",
+    "lint:eslint": "eslint . --fix --cache",
+    "lint:prettier": "prettier --write . --ignore-unknown",
     "prepare": "husky install"
   },
   "keywords": [
@@ -37,5 +37,6 @@
     "typescript-eslint": "^8.25.0",
     "vite": "^6.2.0",
     "vue-eslint-parser": "^9.4.3"
-  }
+  },
+  "type": "module"
 }

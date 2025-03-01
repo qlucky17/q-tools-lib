@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // 结尾使用分号
   semi: true,
   // 使用单引号

@@ -1,5 +1,6 @@
-module.exports = {
+export default {
   extends: ['@commitlint/config-conventional'],
+  ignores: [(commit) => commit.includes('init')], // 提交过程中忽略有init的字符串
   rules: {
     'type-enum': [
       // type枚举
@@ -27,7 +28,7 @@ module.exports = {
     'subject-empty': [2, 'never'], // subject不能为空
     'subject-case': [0], // subject位不限制大小写，默认是'lower-case'，开头字母为小写
     'subject-full-stop': [0, 'never', '.'], // subject以.为结束标记
-    'header-max-length': [2, 'always', 120], // header最长120
+    'header-max-length': [2, 'always', 100], // header最长100
     'body-leading-blank': [0], // body换行
     'footer-leading-blank': [0, 'always'], // footer以空行开头
   },
