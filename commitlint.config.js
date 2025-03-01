@@ -28,9 +28,9 @@ export default {
     'subject-empty': [2, 'never'], // 主题不能为空
     'subject-case': [0], // 不限制主题大小写
     'header-max-length': [2, 'always', 80], // 提交标题最大长度限制(包括type,scope,subject)
-    'body-leading-blank': [2, 'always'], // 正文前必须有一个空行
+    // 'body-leading-blank': [2, 'always'], // 正文前必须有一个空格
     'body-max-line-length': [2, 'always', 80], // 正文每行的长度不能超过100个字符
-    'footer-leading-blank': [2, 'always'], // 脚注前必须有一个空行
+    // 'footer-leading-blank': [2, 'always'], // 脚注前必须有一个空格
     'footer-max-line-length': [2, 'always', 80], // 脚注每行的最大长度不超过100个字符
   },
 };
