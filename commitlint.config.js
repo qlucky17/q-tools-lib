@@ -23,7 +23,7 @@ export default {
     ],
     'type-empty': [2, 'never'], // 提交类型不能为空
     'type-case': [2, 'always', 'lower-case'], // 提交类型必须是小写
-    'scope-empty': [0, 'never'], // 作用域允许为空
+    'scope-empty': [0, 'always'], // 作用域允许为空
     'scope-case': [0], // 不限制作用域大小写
     'subject-empty': [2, 'never'], // 主题不能为空
     'subject-case': [0], // 不限制主题大小写
