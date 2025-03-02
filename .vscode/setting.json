@@ -1,19 +1,10 @@
 {
   "editor.formatOnSave": true,
-  "eslint.format.enable": true,
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "vue",
-    "html",
-    "css",
-    "scss",
-    "less",
-    "json",
-    "markdown"
-  ],
-  "prettier.requireConfig": true,
-  "files.autoSave": "onWindowChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
-  "editor.insertSpaces": true
+  "prettier.requireConfig": true,
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "typescript", "vue", "html"],
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scs", "less", "postcss"]
 }
