@@ -7,10 +7,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "declaration": true,
-    "declarationDir": "./types"
+    "declarationDir": "types"
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

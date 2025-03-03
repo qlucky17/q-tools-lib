@@ -1,6 +1,6 @@
 {
   "name": "q-tools-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/q-tools-lib.umd.js",
   "module": "./dist/q-tools-lib.es.js",
   "exports": {
@@ -12,6 +12,7 @@
   "files": [
     "dist"
   ],
+  "types": "./types/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -21,21 +22,21 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "Vite",
-    "Typescript",
-    "第三方工具库开发"
+    "vite",
+    "typescript",
+    "前端工具库"
   ],
   "author": "hqh",
   "license": "ISC",
-  "description": "",
+  "description": "前端工具库开发",
   "repository": {
     "type": "git",
     "url": "https://github.com/qlucky17/q-tools-lib"
   },
   "devDependencies": {
+    "commitlint": "^19.7.1",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
-    "commitlint": "^19.7.1",
     "eslint": "^9.21.0",
     "@eslint/js": "^9.21.0",
     "typescript-eslint": "^8.25.0",
