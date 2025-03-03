@@ -1,10 +1,15 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+    "source.fixAll": true
+  },
   "editor.tabSize": 2,
-  "prettier.requireConfig": true,
   "eslint.enable": true,
   "eslint.validate": ["javascript", "typescript", "vue", "html"],
   "stylelint.enable": true,
-  "stylelint.validate": ["css", "scs", "less", "postcss"]
+  "stylelint.validate": ["css", "scs", "less", "postcss", "vue", "html"],
+  "prettier.requireConfig": true
 }
