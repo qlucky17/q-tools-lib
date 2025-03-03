@@ -1,7 +1,14 @@
 {
   "name": "q-tools-lib",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.2",
+  "main": "./dist/q-tools-lib.umd.js",
+  "module": "./dist/q-tools-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/q-tools-lib.es.js",
+      "require": "./dist/q-tools-lib.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
